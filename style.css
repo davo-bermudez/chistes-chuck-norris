@@ -4,17 +4,61 @@
   box-sizing: border-box;
   margin: 0;
 }
+
+:root{
+    --glass: rgba(30 30 30 / 20%) ;
+    --filter: blur(10px);
+    --glass30:rgba(176, 173, 173, 0.2) ;
+    --glass10: rgba(0, 0, 0, 0.2) ;
+    --border :20px ;
+    --padding: 10px ; 
+}
+
 body{
     display: flex;
     justify-content: center;
     flex-direction: column ;
-    align-items: center;
+    align-items:baseline ;
     background-image:url(images/chuck\ norris.jpeg);
     background-size: cover;
+    gap: 10px;
+    padding: 10px;
+    padding-top: 300px;
     
 }
 
 .todo{
+  background-color: var(--glass);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border);
+  padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
 
+
+}
+
+#tittle{
+  background-color: var(--glass);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border);
+  padding: var(--padding);
+  width: 500px;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  border: solid aliceblue 1px;
+  
+}
+
+button{
+  background-color: var(--glass10);
+  border: solid aliceblue 1px;
+  padding:var(--padding);
+  color: aliceblue;
+  border-radius: var(--border);
 }
 

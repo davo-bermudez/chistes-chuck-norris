@@ -6,16 +6,13 @@ const URLRAN = 'https://api.chucknorris.io/jokes/random'
 const URLCAT = 'https://api.chucknorris.io/jokes/categories'
 
 
-
-
-
 fetch('https://api.chucknorris.io/jokes/random')
 .then(Response => Response.json())
 .then(data => console.log(data.value))
 
-// fetch('https://api.chucknorris.io/jokes/categories')
-// .then(Response => Response.json())
-// .then(data => console.log(data))
+fetch('https://api.chucknorris.io/jokes/categories')
+.then(Response => Response.json())
+.then(data => console.log(data))
 
 fetch('https://api.chucknorris.io/jokes/random?category=animal')
 .then(Response => Response.json())
@@ -30,8 +27,6 @@ async function actualizar(){
     const asignarchiste = chiste.textContent = data1["value"]
     const asignarimg = imagen.src = data1["icon_url"]
     console.log(data1)
-
-
 }
 
 window.onload = actualizar()
